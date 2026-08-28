@@ -13,6 +13,7 @@
 	"keywords": [],
 	"license": "0-BSD",
 	"devDependencies": {
+		"@codemirror/view": "^6.38.6",
 		"@eslint/js": "^9.39.4",
 		"@types/node": "^22.15.17",
 		"esbuild": "0.25.5",
@@ -23,5 +24,8 @@
 		"obsidian": "latest",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.59.1"
+	},
+	"dependencies": {
+		"obsidian-typings": "^6.34.0"
 	}
 }

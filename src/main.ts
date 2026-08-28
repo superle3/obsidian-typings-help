@@ -11,6 +11,7 @@ import {
 	MyPluginSettings,
 	SampleSettingTab,
 } from './settings';
+import { EditorView } from "@codemirror/view"
 
 // Remember to rename these classes and interfaces!
 
@@ -18,6 +19,8 @@ export default class MyPlugin extends Plugin {
 	settings!: MyPluginSettings;
 
 	async onload() {
+		const mdView = this.app.workspace.getActiveViewOfType(MarkdownView);
+		const view: EditorView | null = mdView?.editor?.activeCM ?? null;
 		await this.loadSettings();
 
 		// This creates an icon in the left ribbon.
